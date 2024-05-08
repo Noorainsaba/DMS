@@ -7,7 +7,7 @@ const session=require('express-session')
 const connectFlash=require('connect-flash')
 const passport=require('passport')
 const MongoStore = require("connect-mongo")
-const dbString = "mongodb://localhost:27017/login"
+const dbString = "mongodb+srv://aishwaryas683:ncet_dms@dms-db.cvnk9nz.mongodb.net/?retryWrites=true&w=majority&appName=dms-db"
 const connection = mongoose.createConnection(dbString)
 const {ensureLoggedOut,ensureLoggedIn}=require('connect-ensure-login')
 const { roles } = require('./utils/constants');
