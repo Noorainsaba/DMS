@@ -1,0 +1,22 @@
+<%-include('./Layouts/header')  %>
+<table class="table">
+    <h1>View documents of all departments</h1>
+    <thead>
+        <th>No.</th>
+        <th>Username</th>
+    </thead>
+    <tbody>
+        <% let counter = 1; %>
+        <% users.forEach(user => { %>
+            <% if (user.role !== 'ADMIN') { %> <!-- Exclude users with the role 'ADMIN' -->
+                <tr>
+                    <td><%= counter %></td> <!-- Display the counter as the user ID -->
+                    <td><a href="/user/profile/<%= user._id %>"><%= user.department %></a></td>
+                </tr>
+                <% counter++; %> <!-- Increment the counter -->
+            <% } %>
+        <% }) %>
+    </tbody>
+</table>
+
+<%-include('./Layouts/footer')  %>

@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  max-width: 760px;
+  margin: auto;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  background-image: url('ii.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-bottom: 6.74rem;
+  box-sizing: inherit;
+  display:flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+  backdrop-filter: blur(8px); /* Adjust the blur amount as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind other content */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav > ul > li > a,
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+nav > ul > li > a:hover,
+a:hover {
+  background-color: #134a91d9;
+  color: #fff;
+}
+
+nav > ul > li:nth-child(1) > a:hover {
+  background-color: #134a91d9;
+  color: #fff;
+}
+
+nav > ul > li:nth-child(2) > a:hover {
+  background-color: #134a91d9;
+  color: #fff;
+}
+
+nav > ul > li:nth-child(3) > a:hover {
+  background-color: #134a91d9;
+  color: #fff;
+}
+
+h1.title {
+  text-align: center;
+  margin: 1rem;
+  text-decoration: underline;
+}
+h1{
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lg-form label,
+.lg-form input {
+  display: block;
+  min-width: 100%;
+  margin: 8px 0px;
+}
+
+.lg-form label {
+  font-weight: bold;
+}
+
+.lg-form input {
+  height: 44px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 1rem;
+  background-color: #f3f4f6;
+}
+
+.lg-form input[type='submit'] {
+  margin: 16px 0;
+  background-color: #134a91d9;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lg-form input[type='submit']:hover {
+  background-color: #7cb7d2; /* Change to desired hover background color */
+  color: #f8fafdf6; /* Change to desired hover text color */
+}
+
+/* Hover effect for input boxes */
+.lg-form input[type='text']:hover,
+.lg-form input[type='password']:hover {
+  background-color: #f8f8f8; /* Change to desired hover background color */
+}
+
+/* Box shadow for login form */
+form.lg-form {
+  margin: 16px;
+  padding: 32px;
+  border: 4px solid #d1d5db;
+  min-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Add box shadow */
+}
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+  border: 2px solid #f3f4f6;
+  /* box-shadow: 0 0 8px #fdf2f8; */
+}
+
+.lg-form label{
+  color: #fff; /* Change to desired color */
+}
+
+table {
+  margin-top: 32px;
+  min-width: 600px;
+  border-spacing: 0;
+  border: 4px solid #d1d5db;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+thead {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+thead tr {
+  border-radius: 8px;
+  background-color: #134a91d9;
+  overflow: hidden;
+}
+
+thead th {
+  padding: 8px 0;
+  text-align: left;
+  padding-left: 16px;
+}
+
+table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+thead th:nth-child(1) {
+  max-width: 44px;
+}
+
+tbody tr td {
+  padding: 8px 0;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.manage-user-form input[type='submit'] {
+  background: transparent;
+  color:#134a91d9;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.manage-user-form input[type='submit']:hover {
+  background-color: #fdf2f8;
+}
+
+.manage-user-form select {
+  border: none;
+  font-size: 1.05rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #f3f4f6;
+}
+
+thead tr th:first-child,
+tbody tr td:first-child {
+  width: 6em;
+  min-width: 6em;
+  max-width: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 8px;
+}
+
+.profile {
+  min-width: 600px;
+  padding: 16px;
+  border: 4px solid #d1d5db;
+  border-radius: 16px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.profile > div {
+  padding: 16px;
+}
+
+.profile .title {
+  font-weight: bold;
+}
+
+.goback {
+  cursor: pointer;
+}
+
+div.messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.messages {
+  list-style: none;
+  min-width: 600px;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+}
+
+ul.messages * {
+  padding: 8px 12px;
+}
+
+.messages .error {
+  background-color: #f87171;
+}
+.messages .success {
+  background-color: #6ee7b7;
+}
+.messages .warning {
+  background-color: #fcd34d;
+}
+.messages .info {
+  background-color: #93c5fd;
+}
+
+/* footer {
+  position: fixed;
+  background-color:#134a91d9; 
+  padding: 10px;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  right: 0;
+  left: 0;
+} */
+footer {
+  position: fixed;
+  background-color: #134a91d9; /* Change this to your desired background color */
+  padding: 20px; /* Adjust padding as needed */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer div {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+footer p{
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* upload form css */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.form-group {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+label {
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  border: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  height: 100px; /* Set a fixed height */
+  resize:none;
+  overflow-y: auto; /* Add a vertical scrollbar when needed */
+}
+
+
+/* Styles for small screens */
+@media only screen and (max-width: 767px) {
+
+  body {
+    background-size: auto; /* Adjust background size as needed for smaller screens */
+    background-attachment: fixed;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .lg-form {
+    margin: 16px; /* Maintain gap on all sides */
+    padding: 32px; /* Add padding */
+    border: 4px solid #d1d5db;
+    min-width: 400px;
+    margin-bottom: 60px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  }
+  table {
+    min-width: auto; /* Remove minimum width constraint */
+    width: calc(100% - 32px); /* Adjust width to leave gap */
+    margin-left: 16px; /* Add left margin */
+    margin-right: 16px; /* Add right margin */
+    padding: 8px; /* Reduce padding for smaller screens */
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .container.my-5 {
+    margin: 50px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container.my-5 .row {
+    max-height: calc(100vh - 200px); /* Adjust as needed, subtracting the height of the footer */
+    overflow-y: auto;}
+  
+    .navbar ul {
+      display: none;
+      flex-direction: column; /* Arranges items vertically */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+  .navbar ul.active {
+    display: block;
+  }
+
+  .navbar-menu li {
+    margin: 5px 0;
+  }
+
+  .navbar-menu li a {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .navbar-toggler .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  .uploaded-files th,
+  .uploaded-files td {
+    min-width: auto; /* Allow cells to adjust width based on content */
+    width: auto; /* Allow cells to expand based on content */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .uploaded-files td:first-child {
+    width: 20%; /* Reduce width of the first column for smaller screens */
+  }
+}
+
+
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.file-container {
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+  width: 80vw;
+}
+
+.uploaded-files {
+  margin-top: 32px;
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.uploaded-files th,
+.uploaded-files td {
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  min-width: 10px;
+  max-width: none; /* Allow cells to expand */
+}
+
+.uploaded-files th {
+  background-color:#134a91d9;
+  color: #fff;
+}
+
+
+.uploaded-files td a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color:  #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+

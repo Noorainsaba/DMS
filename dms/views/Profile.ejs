@@ -1,0 +1,38 @@
+
+<!-- profile.ejs -->
+
+<%- include('./Layouts/header') %>
+<h1>View <%= person.department %> department's File</h1>
+<div class="file-container">
+    
+    <table class="uploaded-files">
+        <thead>
+            <tr>
+                <th >Sl No.</th>
+                <th>Filename</th>
+                <th>File Link</th>
+                <th >Date</th>
+                <th >Description</th>
+                <th>Uploaded By</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% uploadedFiles.forEach((file, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td> <!-- Display serial no. (index + 1) -->
+                    <td><%= file.filename %></td> <!-- Display filename -->
+                    <td><a target="_blank" href="<%= file.url %>">View</a></td> <!-- Display URL as a link -->
+                    <td><%= file.date %></td> <!-- Display date -->
+                    <td><%= file.description %></td> <!-- Display description -->
+                    <td><%= file.upload_by %></td> <!-- Display uploaded_by -->
+                    <td><%= file.department %></td> <!-- Display department -->
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('./Layouts/footer') %>
+
+

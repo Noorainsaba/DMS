@@ -1,0 +1,47 @@
+// uploadfile.js
+
+<%- include('./Layouts/header') %>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-6 m-auto">
+          <h1 class="text-center display-3 my-3">Upload your File Here</h1>
+          <form id="uploadForm" action="/user/upload" method="POST" enctype="multipart/form-data" onsubmit="redirectToProfile()">
+            <div class="form-group">
+              <label for="documentName">Document Name</label>
+              <input type="text" id="documentName" name="documentName" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input type="text" id="department" name="department" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="upload_by">Uploaded By</label>
+              <input type="text" id="upload_by" name="upload_by" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="file">Choose File</label>
+              <input type="file" name="file" id="file" class="form-control-file" required>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      // Function to redirect to the profile page after form submission
+      document.getElementById('uploadForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        redirectToProfile();
+      });
+    
+      function redirectToProfile() {
+        window.location.href = 'http://localhost:3000/user/profile'; // Change "/profile" to the actual URL of your profile page
+      }
+    </script> -->
+
+<%- include('./Layouts/footer') %>
